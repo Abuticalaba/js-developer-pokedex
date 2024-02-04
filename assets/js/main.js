@@ -7,19 +7,19 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
-
-            <div class="detail">
-                <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                </ol>
-
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
-            </div>
-        </li>
+        <a onclick="paginaNova(${pokemon.number})" href="#">
+            <li class="pokemon ${pokemon.type}">
+                <span class="number">#${pokemon.number}</span>
+                <span class="name">${pokemon.name}</span>
+                <div class="detail">
+                    <ol class="types">
+                        ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                    </ol>
+                    <img src="${pokemon.photo}"
+                         alt="${pokemon.name}">
+                </div>
+            </li>
+        </a>
     `
 }
 
@@ -28,9 +28,31 @@ function loadPokemonItens(offset, limit) {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
     })
+
 }
 
-loadPokemonItens(offset, limit)
+const screenDetail = document.querySelector('.screenDetail')
+const fundo = document.querySelector('.content')
+
+//click aparecer detalhes
+function paginaNova(identifyPoke) {
+    
+    const identify = identifyPoke;
+    console.log(identify);
+    
+    screenDetail.classList.add("opacidade");
+    fundo.classList.add("opacidade0");
+
+} 
+
+//click sumir detalhes
+function voltar() {
+    screenDetail.classList.remove("opacidade");
+    fundo.classList.remove("opacidade0");
+}
+
+loadPokemonItens(offset, limit);
+
 
 loadMoreButton.addEventListener('click', () => {
     offset += limit
@@ -45,3 +67,5 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+

@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.screenDetail {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    background-color: #46D1B1;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 1rem black;
+    opacity: 0;
+}
+
+.opacidade {
+    opacity: 1;
+    position: absolute;
+    top: 2%;
+    left: 40%;
+}
+
+.opacidade0 {
+    opacity: 0;
+}
+
+@media screen and (min-width: 576px) {
+    .screenDetail {
+        max-width: 576px;
+        margin: 1rem auto;
+    }
+}
+
+.screenDetail header{
+    display: flex;
+    flex-direction: column;
+    background-color: #46D1B1;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.screenDetail header .imagem{
+    width: 400px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons img {
+    height: 30px;
+}
+
+.infoPokemon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.infoPokemon .namePokemon {
+    padding: 0;
+    margin: 0;
+}
+
+.typesPokemon {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    list-style: none;
+    font-size: .8rem;
+}
+
+.typesPokemon li {
+    padding: 0.1rem 1rem;
+    margin-right: 0.5rem;
+    background-color: #46D1B1;
+    filter: brightness(1.1);
+    border-radius: 1rem;
+}
+
+.screenDetail footer {
+    border-radius: 1rem 1rem;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.screenDetail footer .menuDetail{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.screenDetail footer .menuDetail a{
+    text-decoration: none;
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.screenDetail footer .menuDetail a:hover{
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.screenDetail footer .menuDetail li{
+    height: 30px;
+}
+
+.screenDetail footer .Detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.screenDetail footer .Detail .title{
+    list-style: none;
+    color: #868686;
+}
+
+.screenDetail footer .Detail .title li{
+    margin: 1em 0;
+}
+
+.screenDetail footer .Detail .result{
+    list-style: none;
+}
+
+.screenDetail footer .Detail .result li{
+    margin: 1em 0;
+}
+
+
