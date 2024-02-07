@@ -78,6 +78,10 @@
     background-color: #f9aec7;
 }
 
+.content #pokemonList a {
+    text-decoration: none;
+}
+
 .pokemon {
     display: flex;
     flex-direction: column;

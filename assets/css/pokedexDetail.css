@@ -13,6 +13,7 @@
     opacity: 0;
 }
 
+/*detalhes do pokemon*/
 .opacidade {
     opacity: 1;
     position: absolute;
@@ -23,6 +24,7 @@
 .opacidade0 {
     opacity: 0;
 }
+/*detalhes do pokemon*/
 
 @media screen and (min-width: 576px) {
     .screenDetail {
