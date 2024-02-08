@@ -6,11 +6,10 @@
 .screenDetail {
     display: flex;
     flex-direction: column;
-    min-width: 320px;
-    background-color: #46D1B1;
     border-radius: 1rem;
     box-shadow: 0px 3px 1rem black;
     opacity: 0;
+    background-color: black;
 }
 
 /*detalhes do pokemon*/
@@ -32,17 +31,31 @@
         margin: 1rem auto;
     }
 }
+@media screen and (max-width: 576px) {
+    .opacidade {
+        opacity: 1;
+        position: absolute;
+        top: 1%;
+        left: 1%;
+    }
+    section.screenDetail{
+        width: 400px;
+    }
+    section.screenDetail header .imagem{
+        height: 300px;
+    }
+}
 
 .screenDetail header{
     display: flex;
     flex-direction: column;
-    background-color: #46D1B1;
     padding: 1.5rem 2rem;
     border-radius: 1rem 1rem 0 0;
 }
 
 .screenDetail header .imagem{
     width: 400px;
+    height: 380px;
 }
 
 .icons {
@@ -68,6 +81,7 @@
 .infoPokemon .namePokemon {
     padding: 0;
     margin: 0;
+    text-transform: capitalize;
 }
 
 .typesPokemon {
@@ -81,7 +95,6 @@
 .typesPokemon li {
     padding: 0.1rem 1rem;
     margin-right: 0.5rem;
-    background-color: #46D1B1;
     filter: brightness(1.1);
     border-radius: 1rem;
 }
@@ -139,3 +152,81 @@
 }
 
 
+
+.normal1 {
+    background: linear-gradient(0deg, black 15%, #a6a877);
+}
+
+.grass1 {
+    background: linear-gradient(0deg, black 15%, #77c850);
+}
+
+.fire1 {
+    background: linear-gradient(0deg, black 15%, #ee7f30);
+}
+
+.water1 {
+    background: linear-gradient(0deg, black 15%, #678fee);
+}
+
+.electric1 {
+    background: linear-gradient(0deg, black 15%, #f7cf2e);
+}
+
+.ice1 {
+    background: linear-gradient(0deg, black 15%, #98d5d7);
+}
+
+.ground1 {
+    background: linear-gradient(0deg, black 15%, #dfbf69);
+}
+
+.flying1 {
+    background: linear-gradient(0deg, black 15%, #a98ff0);
+}
+
+.poison1 {
+    background: linear-gradient(0deg, black 15%, #a040a0);
+}
+
+.fighting1 {
+    background: linear-gradient(0deg, black 15%, #bf3029);
+}
+
+.psychic1 {
+    background: linear-gradient(0deg, black 15%, #f65687);
+}
+
+.dark1 {
+    background: linear-gradient(0deg, black 15%, #725847);
+}
+
+.rock1 {
+    background: linear-gradient(0deg, black 15%, #b8a137);
+}
+
+.bug1 {
+    background: linear-gradient(0deg, black 15%, #a8b720);
+}
+
+.ghost1 {
+    background: linear-gradient(0deg, black 15%, #6e5896);
+}
+
+.steel1 {
+    background: linear-gradient(0deg, black 15%, #b9b7cf);
+}
+
+.dragon1 {
+    background: linear-gradient(0deg, black 15%, #6f38f6);
+}
+
+.fairy1 {
+    background: linear-gradient(0deg, black 15%, #f9aec7);
+}
+
+.space {
+    padding: 5px;
+    text-transform: capitalize;
+    border-radius: 5px;
+}
